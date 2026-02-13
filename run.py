@@ -2,6 +2,7 @@ from flask import Flask
 from flask import render_template
 app = Flask(__name__)   #name, palabra reservada para que flask sepa donde encointrar las plantilla en nuestra app
 
+
 posts = [4, 4, 4, 4, 4, 4, 4]
 
 @app.route("/")
@@ -18,3 +19,4 @@ def show_post(slug):
 @app.route("/admin/post/<int:post_id>/")
 def post_form(post_id=None):
     return render_template("admin/post_form.html", post_id=post_id)
+
