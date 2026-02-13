@@ -3,5 +3,9 @@
 {% block title %}Tutorial Flask: Miniblog{% endblock %}
 
 {% block content %}
-    <p>Hay {{ num_posts }} posts</p>
+    <ul>
+    {% for post in posts %}
+        <li>{{ post.title }}</li>
+    {% endfor %}
+    </ul>
 {% endblock %}
